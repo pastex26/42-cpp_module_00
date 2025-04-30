@@ -3,7 +3,6 @@
 
 int	main(void)
 {
-	std::string	instruction;
 	PhoneBook	phoneBook;
 
 	while (true)

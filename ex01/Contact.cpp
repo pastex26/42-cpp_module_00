@@ -22,6 +22,11 @@ std::string	Contact::getPhoneNumber()
 	return phoneNumber;
 }
 
+std::string	Contact::getSecret()
+{
+	return Secret;
+}
+
 // setter
 bool	Contact::setFirstName(std::string str)
 {

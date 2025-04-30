@@ -4,7 +4,7 @@ OBJ_DIR := .obj
 
 INC := Contact.hpp PhoneBook.hpp
 
-CC := c++ -Wall -Wextra -Werror -std=c++98
+CC := c++ -Wall -Wextra -Werror -pedantic -std=c++98
 SRC := $(addsuffix .cpp, $(FILE))
 
 

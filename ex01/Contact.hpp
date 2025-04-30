@@ -20,6 +20,7 @@ public:
 	std::string	getLastName();
 	std::string	getNickname();
 	std::string	getPhoneNumber();
+	std::string	getSecret();
 
 // setter
 	bool		setFirstName(std::string str);

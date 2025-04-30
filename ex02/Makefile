@@ -1,8 +1,8 @@
-FILE := main
+FILE := tests Account
 
 OBJ_DIR := .obj
 
-INC := 
+INC := Account.hpp
 
 CC := c++ -Wall -Wextra -Werror -std=c++98
 SRC := $(addsuffix .cpp, $(FILE))
@@ -10,7 +10,7 @@ SRC := $(addsuffix .cpp, $(FILE))
 
 OBJ := $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(FILE)))
 
-NAME := megaphone
+NAME := account
 
 
 $(OBJ_DIR):

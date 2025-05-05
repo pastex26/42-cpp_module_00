@@ -5,9 +5,6 @@ int	main(void)
 {
 	PhoneBook	phoneBook;
 
-	while (true)
-	{
-		phoneBook.getInput("");
-	}
+	while (!phoneBook.getInput("").empty());
 	return 0;
 }

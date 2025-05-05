@@ -20,12 +20,12 @@ std::string	PhoneBook::getInput(std::string toGet)
 {
 	std::string	input;
 
-	while (input.empty())
+	while (1)
 	{
 		if (std::cin.eof())
 		{
 			std::cerr << std::endl << "EOF reached" << std::endl;
-			exit (0);
+			break ;
 		}
 		if (!toGet.empty())
 		{
@@ -51,7 +51,7 @@ std::string	PhoneBook::getInput(std::string toGet)
 			}
 			else if (input == "EXIT")
 			{
-				exit (0);
+				break ;
 			}
 			else if (!input.empty())
 			{
@@ -59,7 +59,7 @@ std::string	PhoneBook::getInput(std::string toGet)
 			}
 		}
 	}
-	return input;
+	return ("");
 }
 
 void	PhoneBook::setContact()

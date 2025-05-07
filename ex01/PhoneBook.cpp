@@ -24,7 +24,6 @@ std::string	PhoneBook::getInput(std::string toGet)
 	{
 		if (std::cin.eof())
 		{
-			std::cerr << std::endl << "EOF reached" << std::endl;
 			break ;
 		}
 		if (!toGet.empty())
@@ -115,6 +114,7 @@ void	PhoneBook::showContact()
 	}
 	for (size_t i = 0; i < contact_size; i++)
 	{
+		std::cout << std::right;
 		std::cout << std::setw(10) << i + 1 << "|";
 		std::cout << std::setw(10) << getTruncatedStr(contacts[i].getFirstName()) << "|";
 		std::cout << std::setw(10) << getTruncatedStr(contacts[i].getLastName()) << "|";
@@ -126,17 +126,19 @@ void	PhoneBook::showContact()
 	if (isValidIndex(indexToShow, contact_size))
 	{
 		std::cout << "----------" << std::endl;
-		std::cout << std::left << std::setw(14) << "FirstName" << "| ";
+		std::cout << std::left;
+		std::cout << std::setw(14) << "FirstName" << "| ";
 		std::cout << contacts[indexToShow[0] - 49].getFirstName() << std::endl;
-		std::cout << std::left << std::setw(14) << "LastName" << "| ";
+		std::cout << std::setw(14) << "LastName" << "| ";
 		std::cout << contacts[indexToShow[0] - 49].getLastName() << std::endl;
-		std::cout << std::left << std::setw(14) << "Nickname" << "| ";
+		std::cout << std::setw(14) << "Nickname" << "| ";
 		std::cout << contacts[indexToShow[0] - 49].getNickname() << std::endl;
-		std::cout << std::left << std::setw(14) << "PhoneNumber" << "| ";
+		std::cout << std::setw(14) << "PhoneNumber" << "| ";
 		std::cout << contacts[indexToShow[0] - 49].getPhoneNumber() << std::endl;
-		std::cout << std::left << std::setw(14) << "DarkestSecret" << "| ";
+		std::cout << std::setw(14) << "DarkestSecret" << "| ";
 		std::cout << contacts[indexToShow[0] - 49].getSecret() << std::endl;
 		std::cout << std::setw(15) << "----------" << std::endl;
+		std::cout << std::right;
 	}
 	else
 	{

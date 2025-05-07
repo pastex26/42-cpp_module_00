@@ -32,7 +32,6 @@ bool	Contact::setFirstName(std::string str)
 {
 	if (str.empty())
 	{
-		std::cerr << "Error: First name cannot be empty." << std::endl;
 		return false;
 	}
 	else
@@ -46,7 +45,6 @@ bool	Contact::setLastName(std::string str)
 {
 	if (str.empty())
 	{
-		std::cerr << "Error: Last name cannot be empty." << std::endl;
 		return false;
 	}
 	else
@@ -60,7 +58,6 @@ bool	Contact::setNickname(std::string str)
 {
 	if (str.empty())
 	{
-		std::cerr << "Error: Nickname cannot be empty." << std::endl;
 		return false;
 	}
 	else
@@ -74,7 +71,6 @@ bool	Contact::setPhoneNum(std::string str)
 {
 	if (str.empty())
 	{
-		std::cerr << "Error: Phone number cannot be empty." << std::endl;
 		return false;
 	}
 	else
@@ -88,7 +84,6 @@ bool	Contact::setSecret(std::string str)
 {
 	if (str.empty())
 	{
-		std::cerr << "Error: Secret cannot be empty." << std::endl;
 		return false;
 	}
 	else
